@@ -36,12 +36,13 @@ img {
     bottom: 0;
     right: 0;
     opacity: 0.7;
+    z-index: -1;
 }
 
 .logo {
   height: 60px;
   width: 100px;
-  object-fit: cover;
+  z-index: -1;
 }
 
 a {
@@ -50,6 +51,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 body {
@@ -78,14 +80,6 @@ button:active {
   transform: translateY(1px);
 }
 
-.btn {
-  background-color: #7342d6;
-  color: white;
-  padding: 12px 24px;
-  font-size: 20px;
-  border-radius: 4px;
-  border: none;
-}
 
 /*NAVIGATION*/
 
@@ -106,20 +100,14 @@ button:active {
   color: #04000c;
   font-weight: bold;
   padding: 8px;
+  transition: all 300ms ease;
 }
 
 .nav__link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.nav__link--primary {
-  border: 2px solid #04000c;
-  border-radius: 4px;
-}
-
-.nav__link--primary:hover {
-  text-decoration: none;
-}
 
 .btn__menu {
   background-color: transparent;
@@ -250,7 +238,6 @@ button:active {
   width: 30%;
   margin: 16px;
   padding: 16px;
-  border-radius: 8px;
   text-align: center;
   vertical-align: top;
 }
