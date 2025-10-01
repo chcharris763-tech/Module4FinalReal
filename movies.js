@@ -6,12 +6,11 @@ let currentMovies = [];
 
 function searchChange(event) {
     renderMovies(event.target.value);
-    searchInput.innerHTML = event.target.value;
 }
 
 
 async function renderMovies(searchTerm) {
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=fa23a09b&s=${searchTerm}`);
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=fa23a09b&s=${searchTerm}`);
     const data = await response.json();
     currentMovies = data.Search;
     displayMovies(currentMovies);
