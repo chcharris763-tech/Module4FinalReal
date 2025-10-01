@@ -57,10 +57,10 @@
     </div>
     <div class="sort">
         <h2 class="sort__title">Search results</h2>
-        <select id="filter" onchange="filterMovies(event)">
-              <option value="" disabled selected>Sort</option>
-              <option value="asc">Newest to Oldest</option>
-              <option value="desc">Alphabetically</option>
+        <select id="sortMovies" onchange="sortChange(event)">
+              <option value="" disabled selected>Sort by Year</option>
+              <option value="newest">Newest to Oldest</option>
+              <option value="oldest">Oldest to Newest</option>
         </select>
         </div>
     </div>
