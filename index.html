@@ -45,11 +45,10 @@
     <div class="search__wrapper">
         <h1 class="search__header">Browse Our Movies</h1>
         <div class="search__container">
-            <input type="text" class="search__box" placeholder="Search for Movies" onchange="searchChange()">
+            <input type="text" class="search__box" placeholder="Search for Movies" onchange="searchChange(event)">
             <button class="search__icon"><i class="fas fa-search search__icon"></i></button>
         </div>
     </div>
-    <section class="results">
     <div class="sort">
         <h2 class="sort__title">Search results</h2>
         <select id="filter" onchange="filterMovies(event)">
@@ -58,7 +57,15 @@
               <option value="RATING">Rating</option>
         </select>
         </div>
-    </section>
     </div>
+    <div class="movies">
+     <div class="movie">
+            <img class="movie__img" src="" alt=""/>
+            <h3 class="movie__title">Title</h3>
+            <p class="movie__year">Year</p>
+            <button class="movie__btn">Add to Watchlist</button>
+        </div>
+    </div>
+  </div>
 </body>
 </html>

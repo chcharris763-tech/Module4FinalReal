@@ -238,3 +238,19 @@ button:active {
   align-items: center;
   text-align: center;
 }
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.movie {
+  display: inline-block;
+  width: 30%;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: top;
+}
