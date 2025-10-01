@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6487f0a3d4.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="movies.js"></script>
+</head>
+<body>
+   <div id="landing">
+    <nav>
+      <div class="nav__container">
+        <img src="istockphoto-1642381175-612x612.jpg" alt="" class="logo">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Watchlist</a></li>
+          <li><a href="#" class="nav__link nav__link--primary">Movies</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Movies</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Watchlist</a>
+            </li>
+          </ul>
+        </div>
+        </nav>
+         <div class="overlay">
+            <img src="istockphoto-1302499179-612x612.jpg" alt="">
+        </div>
+    <div class="search">
+        <h1 class="search__header">Browse Our Movies</h1>
+        <div class="search__container">
+            <input type="text" class="search__box" placeholder="Search for Movies">
+            <i class="fas fa-search search__icon"></i>
+        </div>
+    </div>
+    <section class="results">
+    <div class="sort">
+        <h2 class="sort__title">Search results</h2>
+        <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="Year">Year</option>
+              <option value="RATING">Rating</option>
+        </select>
+        </div>
+    </section>
+    </div>
+</body>
+</html>
