@@ -109,14 +109,6 @@ button:active {
 }
 
 
-.btn__menu {
-  background-color: transparent;
-  font-size: 40px;
-  border: none;
-  color: #7342d6;
-  display: none;
-}
-
 .menu__backdrop {
   position: absolute;
   background-color: #242424;
@@ -240,4 +232,14 @@ button:active {
   padding: 16px;
   text-align: center;
   vertical-align: top;
+}
+
+.movie__button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b302f;
+  color: white;
 }
