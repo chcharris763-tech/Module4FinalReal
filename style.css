@@ -80,6 +80,14 @@ button:active {
   transform: translateY(1px);
 }
 
+.btn {
+  background-color: #7342d6;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+}
 
 /*NAVIGATION*/
 
@@ -160,6 +168,66 @@ button:active {
   color: white;
 }
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #1a1414;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 300ms ease;
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  color: white;
+  font-size: 40px;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px;
+  color: white;
+}
+
+
 /*SEARCH*/
 
 .search__wrapper {
@@ -222,16 +290,19 @@ button:active {
 .movies {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 
 .movie {
   display: inline-block;
-  width: 30%;
+  width: 100%;
+  max-width: calc(100%/4);
   margin: 16px;
   padding: 16px;
   text-align: center;
   vertical-align: top;
+  
 }
 
 .movie__button {
@@ -242,4 +313,24 @@ button:active {
   border-radius: 4px;
   background-color: #3b302f;
   color: white;
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 550px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .movie__img {
+    max-height: 150px;
+  }
+
+ .movie__button {
+  height: 50px;
+  padding-top: 4px;
+ } 
 }
