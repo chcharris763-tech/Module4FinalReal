@@ -315,8 +315,18 @@ button:active {
   color: white;
 }
 
-/* SMALL PHONES, LARGE SMARTPHONES */
-@media (max-width: 550px) {
+/*FOOTER*/
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 48px;
+}
+
+ /*SMALL PHONES*/
+@media (max-width: 480px) {
   .btn__menu {
     display: block;
   }
@@ -326,7 +336,68 @@ button:active {
   }
 
   .movie__img {
+    max-height: 120px;
+  }
+}
+
+
+/*LARGE SMARTPHONES */
+@media (max-width: 640px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .movie {
+    width: 100%;
+    max-width: calc(100%/3);
+  }
+
+  .movie__img {
     max-height: 150px;
+  }
+
+ .movie__button {
+  height: 50px;
+  padding-top: 4px;
+ } 
+}
+
+/* TABLETS, SMALL SCREENS */
+@media (max-width: 768px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .movie__img {
+    max-height: 200px;
+  }
+
+ .movie__button {
+  height: 50px;
+  padding-top: 4px;
+ } 
+}
+
+/* LARGE PHONES, TABLETS */
+@media (max-width: 1024px) { 
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .movie__img {
+    max-height: 250px;
   }
 
  .movie__button {
